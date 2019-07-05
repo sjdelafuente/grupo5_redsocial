@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HostHelper</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/stylehelper.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <div class="logo">
+          <img src="img/logo.jpg" alt="logo">
+        </div>
+          <div class="burger">
+            <a href="#" class="aIcon">
+              <span><i class="fa fa-bars"></i></span>
+            </a>
+          </div>
+        <div class="navcontainer">
+          <nav class="navlist">
+            <ul>
+              <li><a href="#"> Home </a></li>
+              <li><a href="#"> Perfil </a></li>
+              <li><a href="#"> FAQ's </a></li>
+              <li><a href="#"> Contacto </a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="formularioHelper">
+        <span class="icon">
+          <i class="fas fa-hiking"></i>
+        </span>
+        <div class="titulo">
+          <h2>Helper Register</h2>
+        </div>
+        <form class="form" action="helperRegister.html" method="post" enctype="multipart/form-data">
+          <div class="nombre">
+            <label for="nombres"></label>
+            <input type="text" name="nombre" placeholder="Nombres..."/>
+          </div>
+          <div class="apellido">
+            <label for="apellido"></label>
+            <input type="text" name="apellido" placeholder="Apellido..."/>
+          </div>
+          <div class="id">
+            <label for="id"></label>
+            <input type="text" name="id" placeholder="DNI/ID/Pasaporte..."/>
+          </div>
+          <div class="edad">
+            <label for="edad"></label>
+            <input type="text" name="edad" placeholder="Edad..."/>
+          </div>
+          <div class="pais">
+            <label for="pais"></label>
+            <input type="text" name="paisOrigen" placeholder="País de Origen..."/>
+          </div>
+          <div class="ciudad">
+            <label for="ciudad"></label>
+            <input type="text" name="ciudad" placeholder="Ciudad/pueblo de Origen..."/>
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" name="email" placeholder="Introduzca su email..."/>
+          </div>
+          <div class="password">
+            <label for="password"></label>
+            <input type="password" name="email" placeholder="Introduzca su contraseña..."/>
+          </div>
+          <div class="passwordConfirm">
+            <label for="passwordconfirm"></label>
+            <input type="password" name="email" placeholder="Confirme su contraseña..."/>
+          </div>
+          <div class="sexo">
+            <label for="direccion"></label>
+              <select class="generoSelect" name="genero">
+                <option value="" selected>Seleccione su género...</option>
+                <option value="fem">Femenino</option>
+                <option value="masc">Masculino</option>
+                <option value="nsnc">Prefiero no decirlo</option>
+              </select>
+          </div>
+          <div class="oficio">
+            <label for="oficio"></label>
+            <select class="oficioSelect" name="oficio">
+              <option value="" selected>Introduzca su oficio...</option>
+              <option value="carpinteria">Carpinteria</option>
+              <option value="artesania">Artesania</option>
+              <option value="cultivo">Cultivo</option>
+              <option value="botanica">Botanica</option>
+              <option value="limpieza">Limpieza</option>
+              <option value="otro">Otros Oficios</option>
+            </select>
+          </div>
+          <div class="fotoperfil">
+            <label for="perfil">Foto de Perfil:</label>
+            <input type="file" name="archivo" value="archivo">
+          </div>
+          <div class="enviar">
+            <button>Enviar</button>
+          </div>
+          <div class="reset">
+            <button class ="botonreset" type="reset" name="reiniciar">Reiniciar Formulario</button>
+          </div>
+      </div>
+      <div class="footer">
+        <footer>
+          <span class="top">
+            <a class="fas fa-angle-double-up" href="#"></a>
+          </span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
