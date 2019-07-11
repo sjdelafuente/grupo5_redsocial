@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostHelper - HOST Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/rhost.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+            <div class="menu_bar">
+                <a href="#" class=  "bt-menu"><span><i class="fas fa-bars"></i></span>Menu</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><span class="icon"><i class="fas fa-home"></i></span><a href="home.html">Inicio</a></li>
+                    <li><span class="icon"><i class="fas fa-address-card"></i></span><a href="perfil.html">Perfil</a></li>
+                    <li><span class="icon"><i class="far fa-address-book"></i></span><a href="contact.html">Contacto</a></li>
+                    <li><span class="icon"><i class="fas fa-question"></i></span><a href="faqs.html">FAQS</a></li>
+                    <li><span class="icon"><i class="fas fa-door-open"></i></span><a href="hostHelper.html">Host & Helper's</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div class="formularioHelper">
+      <span class="homeIcon">
+        <i class="fas fa-home"></i>
+      </span>
+      <div class="titulo">
+        <h2>Host Register</h2>
+      </div>
+              <small>Todos los campos son obligatorios.</small>
+      <form class="form" action="helperRegister.html" method="post" enctype="multipart/form-data">
+         <div class="nombre">
+           <label for="nombres"></label>
+           <input type="text" name="nombre" placeholder="Nombres..." required/>
+         </div>
+         <div class="apellido">
+           <label for="apellido"></label>
+           <input type="text" name="apellido" placeholder="Apellido..." required />
+         </div>
+         <div class="id">
+           <label for="id"></label>
+           <input type="text" name="id" placeholder="DNI/ID/Pasaporte..." required />
+         </div>
+         <div class="edad">
+           <label for="edad"></label>
+           <input type="text" name="edad" placeholder="Edad..." required />
+         </div>
+         <div class="pais">
+           <label for="pais"></label>
+           <input type="text" name="paisOrigen" placeholder="País de Origen..." required />
+         </div>
+         <div class="ciudad">
+           <label for="ciudad"></label>
+           <input type="text" name="ciudad" placeholder="Ciudad/pueblo de Origen..." required />
+         </div>
+         <div class="email">
+           <label for="email"></label>
+           <input type="email" name="email" placeholder="Introduzca su email..." required />
+         </div>
+         <div class="password">
+           <label for="password"></label>
+           <input type="password" name="email" placeholder="Introduzca su contraseña..." required />
+         </div>
+         <div class="passwordConfirm">
+           <label for="passwordconfirm"></label>
+           <input type="password" name="email" placeholder="Confirme su contraseña..." required />
+         </div>
+         <div class="vivienda">
+           <label for=""></label>
+           <select class="lugarDeVivienda" name="vivienda">
+             <option value="" selected>Introduzca su tipo de Hospedaje...</option>
+             <option value="hostel">Hostel</option>
+             <option value="casahuerta">Casa c/ Huerta</option>
+             <option value="casafamilia">Casa de Familia</option>
+             <option value="casaecologica">Casa Ecologica</option>
+             <option value="aldea">Aldea Ecologica</option>
+           </select>
+         </div>
+         <div class="fotoperfil">
+           <label class="labelperfil" for="fotoperfil">Foto de Perfil:</label>
+           <input type="file" name="archivo" value="archivo">
+         </div>
+       </form>
+       <div class="botones">
+         <div class="enviar">
+           <button>Enviar</button>
+         </div>
+         <div class="reset">
+           <button class ="botonreset" type="reset" name="reiniciar">Reiniciar Formulario</button>
+         </div>
+       </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <span class="top">
+          <a class="fas fa-angle-double-up" href="#"></a>
+        </span>
+      </footer>
+    </div>
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/newNavbar.js"></script>
+
+  </body>
+  </html>
