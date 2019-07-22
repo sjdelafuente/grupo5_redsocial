@@ -229,6 +229,7 @@
 
         .oferta1{
           background-image: url("../img/paris-1.jpeg");
+          object-fit: cover;
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -237,6 +238,34 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+          opacity: 1;
+          transition: .5s ease;
+
+        }
+
+        .go{
+            transition: .5s ease;
+            opacity: 0;
+            position: relative;
+            text-align: center;
+        }
+
+
+        .oferta1:hover {
+          opacity: 0.5;
+        }
+        
+        .oferta1:hover .go{
+          opacity: 0.9;
+        }
+        
+        .oferta1 .go h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 3em;
+          
+          justify-content: center;
+          opacity: 1;
+
 
         }
 
@@ -245,16 +274,21 @@
           font-size: 2em;
           color: white;
           display: block;
+          padding: 2%;
 
         }
 
         .oferta1 p{
           font-family: 'Raleway', sans-serif;
           color: white;
+          padding:2%;
         }
+
+        
         
         .oferta2{
           background-image: url("../img/thailand1.jpeg");
+          object-fit: cover;
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -263,23 +297,51 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+          opacity:1;
+          transition: .5s ease;
+          backface-visibility: hidden;
+          
         }
+
+      
         
         .oferta2 h5{
           font-family: 'Raleway', sans-serif;
           font-size: 2em;
           color: white;
           display: block;
+          padding:2%;
 
         }
 
         .oferta2 p{
           font-family: 'Raleway', sans-serif;
           color: white;
+          padding:2%;
+        }
+
+        
+        .oferta2:hover {
+          opacity: 0.5;
+        }
+        
+        .oferta2:hover .go{
+          opacity: 0.9;
+        }
+        
+        .oferta2 .go h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 3em;
+          
+          justify-content: center;
+          opacity: 1;
+
+
         }
 
         .oferta3{
           background-image: url("../img/amsterdam1.jpeg");
+          object-fit: cover;
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -288,21 +350,50 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-
+          opacity:1;
+          transition: .5s ease;
+          backface-visibility: hidden;
+          
         }
 
+      
+        
         .oferta3 h5{
           font-family: 'Raleway', sans-serif;
           font-size: 2em;
           color: white;
           display: block;
+          padding:2%;
 
         }
 
         .oferta3 p{
           font-family: 'Raleway', sans-serif;
           color: white;
+          padding:2%;
         }
+
+        
+        .oferta3:hover {
+          opacity: 0.5;
+        }
+        
+        .oferta3:hover .go{
+          opacity: 0.9;
+        }
+        
+        .oferta3 .go h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 3em;
+          
+          justify-content: center;
+          opacity: 1;
+
+
+        }
+        
+
+        
 
 
         /* Encontra tu lugar*/
@@ -311,6 +402,7 @@
           font-family: 'Raleway', sans-serif;
           color: darkgray;
           font-size: 1rem;
+          
         
           
         }
@@ -318,15 +410,18 @@
         .search{
           display: flex;
           flex-direction: row;
-          border: 1px grey solid;
+          justify-content: center;
+          align-items: center;
+          
 
         }
         .search input{
           margin-top: 10px;
+          border: 0;  
           
           
           width:90%;
-          font-size: 2em;
+          font-size: 1em;
 
         }
 
@@ -366,56 +461,47 @@
        }
 
        .users p{
-         
+        font-family: 'Raleway', sans-serif;
       
         
        }
 
+       /*VIAJES PUBLICOS*/
+
+
+       .viajes-publicos{
+         background-color: lightgrey;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-bottom:10px;
+         height: 25vh;
+
+       }
+
+       
+       .viajes-publicos span{
+                  font-size: 30px;
+         
+      }
+
+       .viajes-publicos p{
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 10px;
+
+       }
+
+       .agregar-viajes-publicos a{
+         display: block;
+         text-decoration: none;
+       }
 
        
        
 
 
 
-        /* Puntuacion de usuario*/
-
-    #form {
-        width: 250px;
-        margin: 0 auto;
-        height: 50px;
-      }
-
-      #form p {
-        text-align: center;
-      }
-
-      #form label {
-        font-size: 20px;
-      }
-
-    input[type="radio"] {
-        display: none;
-      }
-
-    label {
-        color: grey;
-
-      }
-
-    .clasificacion {
-        direction: rtl;
-        unicode-bidi: bidi-override;
-      }
-
-    label:hover,
-    label:hover ~ label {
-        color: orange;
-      }
-
-    input[type="radio"]:checked ~ label {
-        color: orange;
-
-      }
 
     .publicidad{
         background-image:url("../img/photo-header.jpeg");
@@ -486,17 +572,8 @@
     height: 50%;
     }
 
-  .welcome {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .lugar img{
-      width:90%;
-      height:280px;
-  }
-
+  
+ 
 }
 
 @media screen and (min-width: 1200px) {
