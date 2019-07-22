@@ -8,7 +8,7 @@
     }
 
   body {
-      background-image: url("../img/white-wallpaper.jpg");
+      
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -137,7 +137,7 @@
       .btn.striped-shadow.white span {
         border-color: black;
         color:black;
-        background: yellow;
+        background: white;
       }
 
       .btn{
@@ -222,81 +222,160 @@
         background-position: 0 100%;
       }
 
-    /*Top users*/
-
-    .top-user-container{
-        margin-top: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .top-users{
-        width: 33%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-users img{
-        border-radius:100%;
-        width: 90px;
-        border: 5px solid black;
-    }
-
-    .top-users p{
-        color: darkblue;
-        width: 90px;
-        justify-content: center;
-    }
+    
 
 
         /* Experiencias que ofrece */
 
-        .places{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 30px;
+        .oferta1{
+          background-image: url("../img/paris-1.jpeg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 10px;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
 
         }
 
-        .places h2{
-            display: none;
-        }
-
-        .lugar{
-            width:80%;
-        }
-
-        .lugar h4{
-            font-family: 'Raleway', sans-serif;
-            font-weight: bolder;
-            margin-bottom:10px;
-            font-size: 1em;
-
-
+        .oferta1 h5{
+          font-family: 'Raleway', sans-serif;
+          font-size: 2em;
+          color: white;
+          display: block;
 
         }
 
-        .lugar img{
-            width:90%;
-            height:180px;
+        .oferta1 p{
+          font-family: 'Raleway', sans-serif;
+          color: white;
+        }
+        
+        .oferta2{
+          background-image: url("../img/thailand1.jpeg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 10px;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+        
+        .oferta2 h5{
+          font-family: 'Raleway', sans-serif;
+          font-size: 2em;
+          color: white;
+          display: block;
+
         }
 
-        .lugar p{
-            width: 90%;
-            font-family: 'Raleway', sans-serif;
+        .oferta2 p{
+          font-family: 'Raleway', sans-serif;
+          color: white;
+        }
+
+        .oferta3{
+          background-image: url("../img/amsterdam1.jpeg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 10px;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
 
         }
 
-        .recomendado-por{
-            width: 90%;
-            font-family: 'Raleway', sans-serif;
-            color: blue;
+        .oferta3 h5{
+          font-family: 'Raleway', sans-serif;
+          font-size: 2em;
+          color: white;
+          display: block;
+
         }
+
+        .oferta3 p{
+          font-family: 'Raleway', sans-serif;
+          color: white;
+        }
+
+
+        /* Encontra tu lugar*/
+
+        .find_your_place{
+          font-family: 'Raleway', sans-serif;
+          color: darkgray;
+          font-size: 1rem;
+        
+          
+        }
+
+        .search{
+          display: flex;
+          flex-direction: row;
+          border: 1px grey solid;
+
+        }
+        .search input{
+          margin-top: 10px;
+          
+          
+          width:90%;
+          font-size: 2em;
+
+        }
+
+        .search button{
+          background-color: transparent;
+          border: 0;
+          min-width: 0;
+          padding: 0;
+          width: auto;
+          font-size: 2em;
+        }
+
+
+       /* Usuarios cerca de tu locacion*/
+       
+       .users-near-location{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+
+       }
+
+       .users-near-location .users{
+         width:33%;
+       }
+
+       .users img{
+         width: 100%;
+         height:200px;
+         object-fit: cover;
+         object-position: cover;
+         position: relative;
+       }
+
+       .users img:hover{
+         transform: scale(1.5); 
+       }
+
+       .users p{
+         
+      
+        
+       }
+
+
+       
+       
+
+
 
         /* Puntuacion de usuario*/
 
