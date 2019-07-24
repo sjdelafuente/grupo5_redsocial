@@ -94,6 +94,7 @@
         font-family: 'Raleway', sans-serif;
         font-size: 2em;
         color:white;
+        height: 220px;
     }
 
     /*Botones como titulares*/
@@ -114,6 +115,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        margin-bottom:15px;
       }
 
       .botonera h2 {
@@ -401,7 +403,8 @@
         .find_your_place{
           font-family: 'Raleway', sans-serif;
           color: darkgray;
-          font-size: 1rem;
+          font-size: 1em;
+          margin-top: 20px;
           
         
           
@@ -431,7 +434,7 @@
           min-width: 0;
           padding: 0;
           width: auto;
-          font-size: 2em;
+          font-size: 1em;
         }
 
 
@@ -444,11 +447,20 @@
 
        }
 
-       .users-near-location .users{
+       .users-near-location .user-container{
          width:33%;
        }
 
-       .users img{
+       .user-image{
+         position: relative;
+       }
+
+       .user-name{
+         position: absolute;
+         
+       }
+
+       .user-image img{
          width: 100%;
          height:200px;
          object-fit: cover;
@@ -456,11 +468,11 @@
          position: relative;
        }
 
-       .users img:hover{
+       .user-image :hover{
          transform: scale(1.5); 
        }
 
-       .users p{
+       .user-name p{
         font-family: 'Raleway', sans-serif;
       
         
@@ -482,7 +494,7 @@
 
        
        .viajes-publicos span{
-                  font-size: 30px;
+        font-size: 30px;
          
       }
 
@@ -498,7 +510,97 @@
        }
 
        
-       
+       /* random destination */
+
+       .carta-container {
+        display: block;
+        height: 200px;
+        margin: 10px;
+        
+        position: relative;
+        width: 95%;
+        z-index: 1;
+        
+      }
+      .carta-container {
+          -webkit-perspective: 800;
+        -moz-perspective: 800;
+        perspective: 800;
+      }
+
+      .carta {
+        box-shadow: 0px 0px 5px black;
+        height: 100%;
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: all 0.5s;
+          
+          -moz-transform-style: preserve-3d;
+        -moz-transition: all 0.5s;
+          
+          transform-style: preserve-3d;
+        transition: all 0.5s;
+      }
+      .carta-container:hover .carta{
+        -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+      }
+
+      
+
+      .carta .lado{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+      }
+      .carta .frente{
+        background-image: url("../img/host.jpeg");
+        background-position: center;
+        background-size:cover;
+        background-color: black;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .frente h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 1em;
+          color: black;
+          display: block;
+          background:rgba(255,255,255,0.7);
+
+      }
+      .carta .atras{
+        background: #F0F0F0;
+        font-family: Helvetica, Verdana, Arial;
+        height: 100%;
+        width: 100%;
+        -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+      }
+
+      .random-destination img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+        position: center;
+      }
+
+
+
+
+
+      /*publididad al pie de pagina*/
 
 
 
@@ -506,12 +608,15 @@
     .publicidad{
         background-image:url("../img/photo-header.jpeg");
         background-size: cover;
+        margin-top: 20px;
+        
+
     }
 
     .publicidad-banner{
         display: flex;
         flex-direction: row;
-        font-size: 30px;
+        font-size: 2em;
         justify-content: center;
     }
 
@@ -523,6 +628,7 @@
         font-family: 'Raleway', sans-serif;
         text-decoration: none;
         color:white;
+        
 
     }
 
@@ -539,6 +645,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size:1em;
 
     }
 
@@ -568,23 +675,86 @@
 
 @media screen and (min-width: 768px) {
 
-  header nav {
-    height: 50%;
-    }
 
+
+  /* botones as titles */
+
+  .btn {
+    width: 100%;
+    height: 30%;
+    line-height: 100px;
+    font-size: 2rem;
+  }
+
+
+  /* Your next adventure fotos */
+
+  .oferta1, .oferta2, .oferta3{
+    
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: .5s ease;
+
+  }
+
+
+
+  /* Personas en tu location */
+
+
+  .user-image img{
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+    object-position: cover;
+    position: relative;
+  }
+  
+
+
+
+
+
+
+  /* random destination */
+
+  .carta-container {
+    display: block;
+    height: 400px;
+    margin: 10px;
+    position: relative;
+    width: 97%;
+    z-index: 1;
+    
+  }
+
+  .random-destination img{
+    width:100%;
+    height: 400px;
+    object-fit: cover;
+    position: center;
+  }
+
+  .frente h3{
+    font-size: 2em;
+    
+
+}
+
+
+ 
   
  
 }
 
 @media screen and (min-width: 1200px) {
-
-  header nav {
-    height: 72%;
-    }
-
-  .lugar img{
-      width: 90%;
-      height: 480px;
-  }
 
 }
