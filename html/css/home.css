@@ -400,12 +400,19 @@
 
         /* Encontra tu lugar*/
 
+        .container-find-your-place-travelers{
+          display: flex;
+          flex-direction: column;
+          
+        }
+
         .find_your_place{
           font-family: 'Raleway', sans-serif;
           color: darkgray;
           font-size: 1em;
           margin-top: 20px;
-          position: relative;
+          width: 100%;
+         
           
         
           
@@ -445,21 +452,37 @@
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
+         width: 100%;
 
        }
 
-       .users-near-location .user-container{
-         width:33%;
+       .users-near-location{
+         width:100%;
+         
        }
 
-       .user-image{
-         position: relative;
+       .user-container{
+        position: relative;
+        width: 33%;
        }
+
+       .travelers-title{
+        font-family: 'Raleway', sans-serif;
+        width: 100%;
+      }
+       
 
        .user-name{
          position: absolute;
+         top: 50%;
+         width: 100%;
+         text-align:center;
+         font-family: "Raleway",sans-serif;
+         transition: .5s ease;
+         opacity: 0;
          
        }
+
 
        .user-image img{
          width: 100%;
@@ -467,18 +490,32 @@
          object-fit: cover;
          object-position: cover;
          position: relative;
+         transition: .5s ease;
+         
        }
 
-       .user-image :hover{
-         transform: scale(1.5);
-         z-index: 2; 
-       }
+       
 
-       .user-name p{
+       .user-container:hover {
+        transform: scale(1.2);
+        z-index: 2; 
+        opacity:0.7;
+        transition: ease .5s;
+        }
+
+       .user-container:hover .user-name {
         font-family: 'Raleway', sans-serif;
-      
-        
-       }
+        font-size: 2em;
+        justify-content: center;
+        opacity: 1;
+        background-color:rgba(255,255,255,0.6);
+
+       } 
+
+       
+
+
+       
 
        /*VIAJES PUBLICOS*/
 
@@ -677,7 +714,17 @@
 
 @media screen and (min-width: 768px) {
 
+  /* We are host helpers */
 
+  .welcome {
+    background-image: url("../img/comments-background.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4em;
+    color:white;
+    height: 500px;
+  }
 
   /* botones as titles */
 
@@ -721,7 +768,22 @@
   }
   
 
+  .container-find-your-place-travelers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
 
+  .find_your_place{
+    
+   }
+
+
+  
+  .users-near-location{
+    width: 100%;
+  }
 
 
 
@@ -749,15 +811,19 @@
     font-size: 2em;
     
 
+    }
+
 }
 
 
  
   
  
-}
+
 
 @media screen and (min-width: 1024px) {
+
+
 
 
   /* OFERTAS */
@@ -786,59 +852,100 @@
 
   .user-image img{
     width: 100%;
-    height:200px;
+    height:400px;
     object-fit: cover;
     object-position: cover;
     position: relative;
   }
 
-  }
 
   /*There is always an H for an H */
 
 
   
+  .container-find-your-place-travelers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 10px;
 
-
-  .find_your_place{
-    display: inline-block;
-    width: 48%;
-    position: absolute;
-    top:980px;
-    left: 700px;
   }
 
+  .find_your_place{
+          width: 48%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+      }
 
 
 
+  .find_your_place h3{
+  font-size: 3em;
+  }
+
+  .find_your_place .search{
+    font-size: 2em;
+    width: 40%;
+    align-content: center;
+    margin-top: 60px;
+  }
+
+ 
   /* travelers at your location*/
 
   .travelers-title{
-    margin-left: 10px;
-    margin-bottom: 10px;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items:center;
+    margin-bottom: 30px;
+  } 
 
-  }
+ 
 
   .travelers-title h1{
     font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+  }
+
+  .user-container:hover .user-name {
+    font-size:3em;
+    }
+
+
+
+
+  /* publicidad */
+
+  .publicidad-banner{
+    font-size: 5em;
+    
+  }
+
+  .party-info{
+    font-size:3em;
 
   }
 
-  /* Anula boton como titular */
-
-  .botonera-container.travelers {
-    display: none;  
- 
+  .viajes-publicos span{
+     font-size: 5em;
+   
   }
 
-    .users-near-location{
-      margin-left:10px;
+  .viajes-publicos p{
+    font-size: 2em;
+   }
 
-   }  
+ .agregar-viajes-publicos a{
+  font-size: 4;
+    }
+}
+
+   
 
 
 

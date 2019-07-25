@@ -1,0 +1,863 @@
+/* ONLY NAVBAR CONFIG */
+
+@media screen and (min-width: 360px) {
+
+    * {
+    margin: 0px;
+    padding: 0px;
+    }
+
+  body {
+      
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+
+  header {
+      width: 100%;
+    }
+
+    .menu_bar {
+        display: block;
+        width: 100%;
+      }
+
+    .menu_bar .bt-menu{
+        display: block;
+        padding: 20px;
+        background-color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        color: white;
+        font-family: 'Luckiest Guy', sans-serif;
+        }
+
+    .menu_bar span {
+          float: right;
+          font-size: 30px;
+        }
+
+  header nav {
+    width: 90%;
+    min-width: 360px;
+    background: black;
+    height: 68%;
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    }
+
+
+
+  header nav ul {
+      overflow: hidden;
+      list-style: none;
+    }
+
+    header nav ul li{
+        display:block;
+        float: none;
+        border-bottom:1px solid rgba(255,255,255,0.3);
+        padding: 20px;
+      }
+
+    header nav ul li:hover{
+        background: #E56B70;
+        }
+
+    header nav ul li a {
+      padding: 20px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    header nav ul li a span{
+      margin-right: 10px;
+      color: white;
+    }
+
+    .icon{
+        color: white;
+    }
+
+    .welcome {
+        background-image: url("../img/comments-background.jpeg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2em;
+        color:white;
+        height: 220px;
+    }
+
+    /*Botones como titulares*/
+
+
+    .botonera, :after, :before {
+        box-sizing: border-box;
+      }
+
+      :focus {
+        outline: none;
+      }
+
+
+      .botonera {
+
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-bottom:15px;
+      }
+
+      .botonera h2 {
+        font-family: 'Raleway', sans-serif;
+      }
+
+      button {
+        overflow: visible;
+        border: 0;
+        padding: 0;
+        margin: 1.8rem;
+      }
+
+      .btn.striped-shadow span {
+        display: block;
+        position: relative;
+        z-index: 2;
+        border: 5px solid;
+      }
+
+      .btn.striped-shadow.white span {
+        border-color: black;
+        color:black;
+        background: white;
+      }
+
+      .btn{
+        font-family: 'Bungee Shade', sans-serif;
+        height: 80px;
+        line-height: 65px;
+        display: inline-block;
+        letter-spacing: 1px;
+        position: relative;
+        font-size: 1.35rem;
+        transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+        transition: opacity .3s, z-index .3s step-end, transform .3s;
+        transition: opacity .3s,
+          z-index .3s step-end,
+          transform .3s,
+          -webkit-transform .3s;
+        z-index: 1;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .btn {
+        width: 100%;
+        height: 10%;
+        line-height: 38px;
+      }
+
+      button.btn.striped-shadow.white:after, button.btn.striped-shadow.white:before {
+        background-image: linear-gradient(
+          135deg,
+          transparent 0,
+          transparent 5px,
+          black 5px,
+          black 10px,
+          transparent 10px
+        );
+      }
+
+      button.btn.striped-shadow:hover:before {
+        max-height: calc(100% - 10px);
+      }
+
+      button.btn.striped-shadow:after {
+        width: calc(100% - 4px);
+        height: 8px;
+        left: -10px;
+        bottom: -9px;
+        background-size: 15px 8px;
+        background-repeat: repeat-x;
+      }
+
+      button.btn.striped-shadow:after, button.btn.striped-shadow:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        transition: max-height .3s, width .3s, -webkit-transform .3s;
+        transition: transform .3s, max-height .3s, width .3s;
+        transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+      }
+
+      .btn.striped-shadow:hover {
+        -webkit-transform: translate(-12px, 12px);
+        -ms-transform: translate(-12px, 12px);
+        transform: translate(-12px, 12px);
+        z-index: 3;
+      }
+
+      button.btn.striped-shadow:hover:after, button.btn.striped-shadow:hover:before {
+        -webkit-transform: translate(12px, -12px);
+        -ms-transform: translate(12px, -12px);
+        transform: translate(12px, -12px);
+      }
+      button.btn.striped-shadow:before {
+        width: 8px;
+        max-height: calc(100% - 5px);
+        height: 100%;
+        left: -12px;
+        bottom: -5px;
+        background-size: 8px 15px;
+        background-repeat: repeat-y;
+        background-position: 0 100%;
+      }
+
+    
+
+
+        /* Experiencias que ofrece */
+
+        .oferta1{
+          background-image: url("../img/paris-1.jpeg");
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 10px;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          opacity: 1;
+          transition: .5s ease;
+
+        }
+
+        .go{
+            transition: .5s ease;
+            opacity: 0;
+            position: relative;
+            text-align: center;
+        }
+
+
+        .oferta1:hover {
+          opacity: 0.5;
+        }
+        
+        .oferta1:hover .go{
+          opacity: 0.9;
+        }
+        
+        .oferta1 .go h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 3em;
+          
+          justify-content: center;
+          opacity: 1;
+
+
+        }
+
+        .oferta1 h5{
+          font-family: 'Raleway', sans-serif;
+          font-size: 2em;
+          color: white;
+          display: block;
+          padding: 2%;
+
+        }
+
+        .oferta1 p{
+          font-family: 'Raleway', sans-serif;
+          color: white;
+          padding:2%;
+        }
+
+        
+        
+        .oferta2{
+          background-image: url("../img/thailand1.jpeg");
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 10px;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          opacity:1;
+          transition: .5s ease;
+          backface-visibility: hidden;
+          
+        }
+
+      
+        
+        .oferta2 h5{
+          font-family: 'Raleway', sans-serif;
+          font-size: 2em;
+          color: white;
+          display: block;
+          padding:2%;
+
+        }
+
+        .oferta2 p{
+          font-family: 'Raleway', sans-serif;
+          color: white;
+          padding:2%;
+        }
+
+        
+        .oferta2:hover {
+          opacity: 0.5;
+        }
+        
+        .oferta2:hover .go{
+          opacity: 0.9;
+        }
+        
+        .oferta2 .go h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 3em;
+          
+          justify-content: center;
+          opacity: 1;
+
+
+        }
+
+        .oferta3{
+          background-image: url("../img/amsterdam1.jpeg");
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 10px;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          opacity:1;
+          transition: .5s ease;
+          backface-visibility: hidden;
+          
+        }
+
+      
+        
+        .oferta3 h5{
+          font-family: 'Raleway', sans-serif;
+          font-size: 2em;
+          color: white;
+          display: block;
+          padding:2%;
+
+        }
+
+        .oferta3 p{
+          font-family: 'Raleway', sans-serif;
+          color: white;
+          padding:2%;
+        }
+
+        
+        .oferta3:hover {
+          opacity: 0.5;
+        }
+        
+        .oferta3:hover .go{
+          opacity: 0.9;
+        }
+        
+        .oferta3 .go h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 3em;
+          
+          justify-content: center;
+          opacity: 1;
+
+
+        }
+        
+
+        
+
+
+        /* Encontra tu lugar*/
+
+        .find_your_place{
+          font-family: 'Raleway', sans-serif;
+          color: darkgray;
+          font-size: 1em;
+          margin-top: 20px;
+          position: relative;
+          
+        
+          
+        }
+
+        .search{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          
+
+        }
+        .search input{
+          margin-top: 10px;
+          border: 0;  
+          
+          
+          width:90%;
+          font-size: 1em;
+
+        }
+
+        .search button{
+          background-color: transparent;
+          border: 0;
+          min-width: 0;
+          padding: 0;
+          width: auto;
+          font-size: 1em;
+        }
+
+
+       /* Usuarios cerca de tu locacion*/
+       
+       .users-near-location{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+
+       }
+
+       .users-near-location .user-container{
+         width:33%;
+       }
+
+       .user-image{
+         position: relative;
+       }
+
+       .user-name{
+         position: absolute;
+         
+       }
+
+       .user-image img{
+         width: 100%;
+         height:200px;
+         object-fit: cover;
+         object-position: cover;
+         position: relative;
+       }
+
+       .user-image :hover{
+         transform: scale(1.5);
+         z-index: 2; 
+       }
+
+       .user-name p{
+        font-family: 'Raleway', sans-serif;
+      
+        
+       }
+
+       /*VIAJES PUBLICOS*/
+
+
+       .viajes-publicos{
+         background-color: lightgrey;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-bottom:10px;
+         height: 25vh;
+
+       }
+
+       
+       .viajes-publicos span{
+        font-size: 30px;
+         
+      }
+
+       .viajes-publicos p{
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 10px;
+
+       }
+
+       .agregar-viajes-publicos a{
+         display: block;
+         text-decoration: none;
+       }
+
+       
+       /* random destination */
+
+       .carta-container {
+        display: block;
+        height: 200px;
+        margin: 10px;
+        
+        position: relative;
+        width: 95%;
+        z-index: 1;
+        
+      }
+      .carta-container {
+          -webkit-perspective: 800;
+        -moz-perspective: 800;
+        perspective: 800;
+      }
+
+      .carta {
+        box-shadow: 0px 0px 5px black;
+        height: 100%;
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: all 0.5s;
+          
+          -moz-transform-style: preserve-3d;
+        -moz-transition: all 0.5s;
+          
+          transform-style: preserve-3d;
+        transition: all 0.5s;
+      }
+      .carta-container:hover .carta{
+        -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+      }
+
+      
+
+      .carta .lado{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+      }
+      .carta .frente{
+        background-image: url("../img/host.jpeg");
+        background-position: center;
+        background-size:cover;
+        background-color: black;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .frente h3{
+          font-family: 'Raleway', sans-serif;
+          font-size: 1em;
+          color: black;
+          display: block;
+          background:rgba(255,255,255,0.7);
+
+      }
+      .carta .atras{
+        background: #F0F0F0;
+        font-family: Helvetica, Verdana, Arial;
+        height: 100%;
+        width: 100%;
+        -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+      }
+
+      .random-destination img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+        position: center;
+      }
+
+
+
+
+
+      /*publididad al pie de pagina*/
+
+
+
+
+    .publicidad{
+        background-image:url("../img/photo-header.jpeg");
+        background-size: cover;
+        margin-top: 20px;
+        
+
+    }
+
+    .publicidad-banner{
+        display: flex;
+        flex-direction: row;
+        font-size: 2em;
+        justify-content: center;
+    }
+
+    .publicidad-banner a {
+      margin-top: 10px;
+    }
+
+    article a{
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color:white;
+        
+
+    }
+
+    article span {
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color:white;
+
+
+    }
+
+    .party-info{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:1em;
+
+    }
+
+    .party-info #party{
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color:white;
+    }
+
+    .party-info #bring {
+      font-family: 'Raleway', sans-serif;
+      text-decoration: none;
+      color:white;
+      margin-bottom: 24px;
+    }
+
+    .helper-link:hover {
+        color: fuchsia;
+
+    }
+
+    .host-link:hover{
+        color: yellow;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+
+  /* botones as titles */
+
+  .btn {
+    width: 100%;
+    height: 30%;
+    line-height: 100px;
+    font-size: 2rem;
+  }
+
+
+  /* Your next adventure fotos */
+
+  .oferta1, .oferta2, .oferta3{
+    
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: .5s ease;
+
+  }
+
+
+
+  /* Personas en tu location */
+
+
+  .user-image img{
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+    object-position: cover;
+    position: relative;
+  }
+  
+
+
+
+
+
+
+  /* random destination */
+
+  .carta-container {
+    display: block;
+    height: 400px;
+    margin: 10px;
+    position: relative;
+    width: 97%;
+    z-index: 1;
+    
+  }
+
+  .random-destination img{
+    width:100%;
+    height: 400px;
+    object-fit: cover;
+    position: center;
+  }
+
+  .frente h3{
+    font-size: 2em;
+    
+
+}
+
+
+ 
+  
+ 
+}
+
+@media screen and (min-width: 1024px) {
+
+
+  /* OFERTAS */
+  .ofertas-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+  }
+
+  .oferta1,.oferta2,.oferta3{
+    width: 33%;
+    height: 50vh;
+
+  }
+
+  /* Usuarios cerca de la locacion*/
+
+  .users-near-location{
+    width: 50%;
+  }
+
+  .users-near-location .user-container{
+    width:33%;
+    
+  }
+
+  .user-image img{
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+    object-position: cover;
+    position: relative;
+  }
+
+  }
+
+  /*There is always an H for an H */
+
+
+  
+.container-find-your-place-travelers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 10px;
+
+}
+
+.find_your_place{
+          width: 48%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+}
+
+
+
+.find_your_place h3{
+  font-size: 4em;
+}
+
+.find_your_place .search{
+  font-size: 2em;
+}
+
+.find_your_place .search input{
+  width:100%;
+}
+ 
+/* travelers at your location*/
+
+.travelers-title{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: 30px;
+}
+
+ 
+
+  .travelers-title h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+  }
+
+
+
+  /* Anula boton como titular */
+
+  .botonera-container.travelers {
+    display: none;  
+ 
+  }
+
+    
+
+
+
+
