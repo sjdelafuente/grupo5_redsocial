@@ -18,11 +18,7 @@
       width: 100%;
     }
 
-    .menu_bar {
-        display: block;
-        width: 100%;
-      }
-
+    
     .menu_bar .bt-menu{
         display: block;
         padding: 20px;
@@ -50,6 +46,7 @@
     margin: 0;
     position: absolute;
     z-index: 3;
+    display: none;
     }
 
 
@@ -95,6 +92,10 @@
         font-size: 2em;
         color:white;
         height: 220px;
+    }
+
+    .welcome h1{
+      margin :0;
     }
 
     /*Botones como titulares*/
@@ -943,7 +944,8 @@
  .agregar-viajes-publicos a{
   font-size: 4;
     }
-}
+
+  }
 
    
 
