@@ -1,0 +1,66 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background: url('../img/beach-photo.jpeg') no-repeat fixed;
+    background-size: cover;
+}
+
+a {
+    color:cyan;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.btn a {
+    color: white;
+    transition: all .3s;
+}
+
+.btn a:hover {
+    transition: all .3s;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+
+.bg-color {
+    min-height: 690px;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+label {
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.register-title-host {
+    color: cyan;
+}
+
+.text-h3 {
+    font-weight: bold;
+    color: cyan;
+}
+
+.card-title {
+    color:white;    
+}
+
+.card-text {
+    font-size: 2em;
+    color: white;
+}
+
+.card {
+    margin-top: 24px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
