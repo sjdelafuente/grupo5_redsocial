@@ -1,60 +1,8 @@
 <?php
 
-$errores="";
-
-$enviado="Su consulta ha sido enviada correctamente </ br>";
-
-if(isset($_POST["enviar"])){
-  $nombre= $_POST["name"];
-  $email= $_POST["email"];
-  $subject= $_POST["subject"];
-
-
-  if(!empty($nombre)){
-    $nombre=trim($nombre);
-    $nombre=filter_var($nombre,FILTER_SANITIZE_STRING);
-    }   
-  else{
-    $errores.= "Por favor ingrese un nombre <br />";
-  }
-
-  if(!empty($email)){
-    $email=trim($email);
-    $email=filter_var($email,FILTER_SANITIZE_EMAIL);
-
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-        $errores.="Ingrese un correo valido <br />";
-        }
-      
-      }
-      else{
-      $errores.="Por favor ingresa un correo! <br />";
-
-    }
-  
-  if(!empty($subject)){
-    $subject=trim($subject);
-    $subject=filter_var($subject,FILTER_SANITIZE_STRING);
-  }
-  else{
-    $errores.="Ingrese un Subject valido SIN NUMEROS en el titulo";
-  }
-
-
-
-
-
-
-}
-
-
+require_once('validacion_contacto.php');
 
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,12 +22,7 @@ if(isset($_POST["enviar"])){
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- =======================================================
-    Theme Name: Baker
-    Theme URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+  
 </head>
 
 <body>
@@ -463,35 +406,36 @@ if(isset($_POST["enviar"])){
               <form action="" method="POST" role="form" class="contactForm">
                  <div class="col-md-6 padding-right-zero">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" />
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" value='<?php if(!$enviado && isset($nombre)) echo $nombre ?>' SELECTED />
                   
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"  />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value='<?php if(!$enviado && isset($email)) echo $email ?>' SELECTED  />
                     
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value='<?php if(!$enviado && isset($subject)) echo $subject ?>' SELECTED  />
                     
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5"></textarea>
+                    <textarea class="form-control" name="message" rows="5" placeholder="Leave a message" value='<?php if(!$enviado && isset($subject)) echo $subject ?>' SELECTED></textarea>
                   
                   </div>
                   <?php if(!empty($errores)) : ?>
                   <div class="alert alert-danger">
+
                     <?php echo  $errores; ?>
                     </div>
                     
-                    <?php elseif(empty($errores)): ?>
+                    <?php elseif($enviado): ?>
                       <div class="alert alert-success">
-                        <?php echo $enviado; ?>
+                        <p>Enviado correctamente</p>
                       
                       </div>  
                   
