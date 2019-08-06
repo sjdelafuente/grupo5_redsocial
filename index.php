@@ -1,3 +1,61 @@
+<?php
+
+$errores="";
+
+$enviado="Su consulta ha sido enviada correctamente </ br>";
+
+if(isset($_POST["enviar"])){
+  $nombre= $_POST["name"];
+  $email= $_POST["email"];
+  $subject= $_POST["subject"];
+
+
+  if(!empty($nombre)){
+    $nombre=trim($nombre);
+    $nombre=filter_var($nombre,FILTER_SANITIZE_STRING);
+    }   
+  else{
+    $errores.= "Por favor ingrese un nombre <br />";
+  }
+
+  if(!empty($email)){
+    $email=trim($email);
+    $email=filter_var($email,FILTER_SANITIZE_EMAIL);
+
+        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        $errores.="Ingrese un correo valido <br />";
+        }
+      
+      }
+      else{
+      $errores.="Por favor ingresa un correo! <br />";
+
+    }
+  
+  if(!empty($subject)){
+    $subject=trim($subject);
+    $subject=filter_var($subject,FILTER_SANITIZE_STRING);
+  }
+  else{
+    $errores.="Ingrese un Subject valido SIN NUMEROS en el titulo";
+  }
+
+
+
+
+
+
+}
+
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -376,12 +434,17 @@
       </div>
     </section>
     <!---->
+
+
+
+
+
     <section id="contact" class="section-padding wow fadeInUp delay-05s">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center white">
             <h2 class="service-title pad-bt15">Keep in touch with us</h2>
-            <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="sub-title pad-b t15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
             <hr class="bottom-line white-bg">
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -391,35 +454,51 @@
               <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+41 5787 2323</p>
             </div>
           </div>
+
+
+          
+
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="contact-form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form action="" method="POST" role="form" class="contactForm">
                  <div class="col-md-6 padding-right-zero">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" />
+                  
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"  />
+                    
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validation"></div>
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+                    
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
+                    <textarea class="form-control" name="message" rows="5"></textarea>
+                  
                   </div>
-                  <button type="submit" class="btn btn-primary btn-submit">SEND NOW</button>
+                  <?php if(!empty($errores)) : ?>
+                  <div class="alert alert-danger">
+                    <?php echo  $errores; ?>
+                    </div>
+                    
+                    <?php elseif(empty($errores)): ?>
+                      <div class="alert alert-success">
+                        <?php echo $enviado; ?>
+                      
+                      </div>  
+                  
+                  
+                  <?php endif ; ?>
+                  
+                  <button type="submit" name="enviar" class="btn btn-primary btn-submit">SEND NOW</button>
                 </div>
               </form>
 
@@ -435,18 +514,12 @@
         <div class="row text-center">
           <p>Da boss Company.</p>
           <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Baker
-            -->
             We will never tell you the secret
           </div>
         </div>
       </div>
     </footer>
-    <!---->
+    
   </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
@@ -454,7 +527,7 @@
   <script src="js/wow.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
   <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+
 
 </body>
 </html>
