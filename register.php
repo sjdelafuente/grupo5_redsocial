@@ -29,7 +29,7 @@ if(isset($_POST['submit'])) {
 <body>
     <!--REGISTER MAIN FORM-->
     <div class="bg-color">
-        <form action="perfil.php" method="post">
+        <form action="register.php" method="post">
             <div class="container">
                     <div class="row justify-content-center">
                       <div class="col-12 col-md-8 col-lg-8 col-xl-6" style="margin-top: 50px;">
