@@ -64,8 +64,8 @@ require_once('validacion_contacto.php');
                 <h2 class="bnr-sub-title">Welcome to Host Helper</h2>
                 <p class="bnr-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <br>ex ea commodo consequat.</p>
                 <div class="brn-btn">
-                  <a href="register.html" class="btn btn-download" target="_blank">Registrarse</a>
-                  <a href="login.html" class="btn btn-more" target="_blank">Iniciar Sesion</a>
+                  <a href="register.php" class="btn btn-download" target="_blank">Registrarse</a>
+                  <a href="login.php" class="btn btn-more" target="_blank">Iniciar Sesion</a>
                 </div>
                 <div class="overlay-detail">
                   <a href="#feature"><i class="fas fa-angle-down"></i></a>
