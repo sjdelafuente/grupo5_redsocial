@@ -1,6 +1,16 @@
 <?php
 
+$password="";
+
+$confirm_password="";
+
+
 if($_POST) {
+    
+    $password=$_POST["password"];
+    $confirm_password=$_POST["confirm_password"];
+
+    
     // NOMBRE //
     if(strlen($_POST["nombre"]) == 0){
         echo "<p class='error'> * Debes agregar tu nombre. </p>";
@@ -28,26 +38,41 @@ if($_POST) {
         echo "<p class='error'> * Su apellido no debe contener números. </p>"; 
     }
     // EMAIL //
-    if(strlen($_POST["email"]) == 0){
-        echo "<p class='error'> * Debes agregar tu email. </p>";
+    if(!strlen($_POST["email"]) == 0){
+        if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+            echo "<p class='error'> * Tu email es incorrecto. </p>";
+        }
+
+    } else {echo "<p class='error'> * Debes agregar tu email. </p>";
     }
-    if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-        echo "<p class='error'> * Tu email es incorrecto. </p>";
-    }
+    
+
     // PASSWORD //
-    if(strlen($_POST["password"]) == 0 && strlen($_POST["confirm_password"]) == 0){
+
+    $hash_password=password_hash($password,PASSWORD_DEFAULT);
+
+    $resultado_password=password_verify($password,$hash_password);
+
+
+    
+    if(strlen($password) == 0 && strlen($confirm_password) == 0){
         echo "<p class='error'> * Debes generar tu contraseña. </p>";
     }
-    if(strlen($_POST["password"]) == 0 && strlen($_POST["confirm_password"]) > 0){
+    if(strlen($password) == 0 && strlen($confirm_password) > 0){
         echo "<p class='error'> * Debes generar tu contraseña. </p>";
     }
-    if(strlen($_POST["password"]) > 0 && strlen($_POST["confirm_password"]) == 0){
+    if(strlen($password) > 0 && strlen($confirm_password) == 0){
         echo "<p class='error'> * Debes confirmar tu contraseña. </p>";
     }
-    if(strlen($_POST["password"]) > 0 && strlen($_POST["confirm_password"]) > 0 && $_POST["password"] !== $_POST["confirm_password"]){
+    if(strlen($password) > 0 && strlen($confirm_password) > 0 && $password !== $confirm_password){
         echo "<p class='error'> * Confirme correctamente su contraseña. </p>";
     }
 }
+
+
+
+    
+    
 
 
 
