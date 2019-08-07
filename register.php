@@ -1,3 +1,15 @@
+<?php
+if(isset($_POST['submit'])) {
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +29,7 @@
 <body>
     <!--REGISTER MAIN FORM-->
     <div class="bg-color">
+        <form action="perfil.php" method="post">
             <div class="container">
                     <div class="row justify-content-center">
                       <div class="col-12 col-md-8 col-lg-8 col-xl-6" style="margin-top: 50px;">
@@ -28,50 +41,37 @@
                         </div>
                         <div class="row align-items-center">
                           <div class="col mt-4">
-                            <input type="text" class="form-control" placeholder="Enter your first name...">
+                            <input type="text" class="form-control" name="nombre" value="<?php if(isset($_POST["nombre"])) echo $_POST["nombre"] ?>" placeholder="Enter your first name...">
                           </div>
                         </div>
                         <div class="row align-items-center">
                             <div class="col mt-4">
-                                <input type="text" class="form-control" placeholder="Enter your last name...">
+                                <input type="text" class="form-control" name="apellido" value="<?php if(isset($_POST["apellido"])) echo $_POST["apellido"] ?>" placeholder="Enter your last name...">
                             </div>
                         </div>
                         <div class="row align-items-center mt-4">
                           <div class="col">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" name="email" value="<?php if(isset($_POST["email"])) echo $_POST["email"] ?>" placeholder="Email">
                           </div>
                         </div>
                         <div class="row align-items-center mt-4">
                           <div class="col">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" name="password" value="<?php if(isset($_POST["password"])) echo $_POST["password"] ?>" placeholder="Password">
                           </div>
                           <div class="col">
-                            <input type="password" class="form-control" placeholder="Confirm Password">
+                            <input type="password" class="form-control" name="confirm_password" value="<?php if(isset($_POST["confirm_password"])) echo $_POST["confirm_password"] ?>" placeholder="Confirm Password">
                           </div>
-                        </div>
-                        <div class="custom-control custom-radio" style="margin-top: 24px;">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
-                            <label class="custom-control-label" for="customRadio1">I'm a Host</label>
-                        </div>
-                        <div class="custom-control custom-radio" style="margin-top: 3px;">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio2">I'm a Helper</label>
                         </div>
                         <div class="row justify-content-start mt-3">
                           <div class="col">
-                            <div class="form-check">
-                              <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input">
-                                I Read and Accept <a href="#">Terms and Conditions</a>
-                              </label>
-                            </div>
-              
-                            <button class="btn btn-success mt-3">REGISTER</button>
+                            <input class="btn btn-success mt-3" type="submit" name="submit" value="REGISTER">
+                            <?php require_once('form_validate.php'); ?>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </form>
                                 <!--FOOTER-->
                         <div class="card">
                             <div class="card-header">
