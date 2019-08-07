@@ -38,7 +38,7 @@ if(isset($_POST["enviar"])){
     $subject=filter_var($subject,FILTER_SANITIZE_STRING);
   }
   else{
-    $errores.="Ha olvidado colocarle un subject a su mensaje";
+    $errores.="Ha olvidado colocarle un subject a su mensaje <br />";
   }
 
   if(!empty($message)){
@@ -47,7 +47,7 @@ if(isset($_POST["enviar"])){
   }
 
   else{
-    $errores.="no ha ingresado ningun mensaje";
+    $errores.="no ha ingresado ningun mensaje <br />";
   }
 
   if(!$errores){
