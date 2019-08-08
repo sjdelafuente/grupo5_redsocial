@@ -1,3 +1,6 @@
+<?php
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,12 +48,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <!-- Profile -->
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Edit Profile</a>
-    <a href="setting.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw w3-margin-right"></i>SETTING</a>
+    <a href="setting.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw w3-margin-right"></i>SETTING</a>
   </div>
   <div id="view-profile" class="w3-bar-block">
     <hr>
-    <a href="perfil.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>View profile</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-power-off fa-fw w3-margin-right"></i>Sign off</a>
+    <a href="perfil.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>View profile</a>
+    <a href="cerrarsession.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-power-off fa-fw w3-margin-right"></i>Sign off</a>
   </div>
 
 </nav>
@@ -70,25 +73,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:250px">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port04.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Nicole Rojas </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port05.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Susana Rey </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port06.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Carlos Mendez </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
         </div>
       </div>
       <div class="w3-dropdown-hover w3-hide-small">
         <a href="chat.html"><button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-envelope w3-text-white w3-hover-text-black"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button></a>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:325px">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> private message...</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Sebastian Piñera:</strong> consult publication...</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Mauricio Macri:</strong> tell me day and time...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Eltro:</strong> private message...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/garrett.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Sebastian Gomez:</strong> consult publication...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/lucas.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Mauricio Martinez:</strong> tell me day and time...</a>
         </div>
       </div>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:335px">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-thumbs-up w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> likes your post</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-share w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> has shared your post</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-comments w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> commented on your post</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-thumbs-up w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> likes your post.</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-share w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> has shared your post.</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-comments w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> commented on your post.</a>
         </div>
       </div>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
@@ -98,7 +101,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       </a>
     </div>
      </div>
-
 
   <!-- Header -->
   <header id="portfolio">
@@ -116,8 +118,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </header>
 
 <!-- Chat  -->
-<div class="container">
-<h3 class=" text-center">Messaging</h3>
+<div class="contenedor">
+<h3 class="text-center">Messaging</h3>
 <div class="messaging">
       <div class="inbox_msg">
         <div class="inbox_people">
@@ -136,19 +138,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           <div class="inbox_chat">
             <div class="chat_list active_chat">
               <div class="chat_people">
-                <div class="chat_img"><img src="http://www.rockandpop.cl/wp-content/uploads/2018/01/do.jpg" class="w3-circle" style="height:45px;width:45px" alt="donal"></div>
+                <div class="chat_img"><img src="img/eltro.jpeg" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
                 <div class="chat_ib">
-                  <h5>Donald trump <span class="chat_date">Aug 8</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fotograf%C3%ADa_oficial_del_Presidente_Sebasti%C3%A1n_Pi%C3%B1era_-_2.jpg/220px-Fotograf%C3%ADa_oficial_del_Presidente_Sebasti%C3%A1n_Pi%C3%B1era_-_2.jpg" class="w3-circle" style="height:45px;width:45px" alt="seb"> </div>
-                <div class="chat_ib">
-                  <h5>Sebastian Piñera <span class="chat_date">Aug 6</span></h5>
+                  <h5>Eltro <span class="chat_date">Aug 8</span></h5>
                   <p>Test, which is a new approach to have all solutions
                     astrology under one roof.</p>
                   </div>
@@ -156,9 +148,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
               </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"><img src="https://pbs.twimg.com/profile_images/653558348273569792/joxg8DZD_400x400.png" class="w3-circle" style="height:45px;width:45px" alt="mauri"> </div>
+                <div class="chat_img"><img src="img/garrett.jpg" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
                 <div class="chat_ib">
-                  <h5>Mauricio Macri <span class="chat_date">Aug 5</span></h5>
+                  <h5>Sebastian Gomez<span class="chat_date">Aug 5</span></h5>
                   <p>Test, which is a new approach to have all solutions
                     astrology under one roof.</p>
                 </div>
@@ -166,9 +158,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Xi_Jinping_March_2017.jpg/240px-Xi_Jinping_March_2017.jpg" class="w3-circle" style="height:45px;width:45px" alt=""> </div>
+                <div class="chat_img"><img src="img/lucas.jpg" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
                 <div class="chat_ib">
-                  <h5>Jair Bolsonaro<span class="chat_date">Aug 5</span></h5>
+                  <h5>Mauricio Martinez<span class="chat_date">Aug 4</span></h5>
                   <p>Test, which is a new approach to have all solutions
                     astrology under one roof.</p>
                 </div>
@@ -176,40 +168,50 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"><img src="http://www.rockandpop.cl/wp-content/uploads/2018/01/do.jpg" class="w3-circle" style="height:45px;width:45px" alt=""> </div>
+                <div class="chat_img"><img src="http://www.rockandpop.cl/wp-content/uploads/2018/01/do.jpg" class="w3-circle" style="height:40px;width:40px" alt="img"></div>
                 <div class="chat_ib">
-                  <h5>Xi Jinping <span class="chat_date">Aug 4</span></h5>
+                  <h5>Donald trump <span class="chat_date">Aug 5</span></h5>
                   <p>Test, which is a new approach to have all solutions
                     astrology under one roof.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Vladimir_Vladimirovich_Putin_%282nd_Presidency%29.jpg" class="w3-circle" style="height:45px;width:45px" alt=""> </div>
-                <div class="chat_ib">
-                  <h5>Vladímir Putin <span class="chat_date">Aug 3</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"><img src="https://pbs.twimg.com/profile_images/653558348273569792/joxg8DZD_400x400.png" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
+                  <div class="chat_ib">
+                    <h5>Mauricio Macri <span class="chat_date">Aug 5</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"><img src="https://storage.googleapis.com/mmc-elcaribe-bucket/uploads/2018/06/273f644f-espana.jpg" class="w3-circle" style="height:45px;width:45px" alt=""> </div>
-                <div class="chat_ib">
-                  <h5>Pedro Sánchez <span class="chat_date">Aug 2</span></h5>
-                  <p>Test, which is a new approach to have all solutions
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
+                <div class="chat_list">
+                  <div class="chat_people">
+                    <div class="chat_img"><img src="https://storage.googleapis.com/mmc-elcaribe-bucket/uploads/2018/06/273f644f-espana.jpg" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
+                    <div class="chat_ib">
+                      <h5>Pedro Sánchez <span class="chat_date">Aug 2</span></h5>
+                      <p>Test, which is a new approach to have all solutions
+                        astrology under one roof.</p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="chat_list">
+                  <div class="chat_people">
+                    <div class="chat_img"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Vladimir_Vladimirovich_Putin_%282nd_Presidency%29.jpg" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
+                    <div class="chat_ib">
+                      <h5>Vladímir Putin <span class="chat_date">Aug 3</span></h5>
+                      <p>Test, which is a new approach to have all solutions
+                        astrology under one roof.</p>
+                      </div>
+                    </div>
+                  </div>
           </div>
         </div>
         <div class="mesgs">
           <div class="msg_history">
             <div class="incoming_msg">
-              <div class="incoming_msg_img"><img src="http://www.rockandpop.cl/wp-content/uploads/2018/01/do.jpg" class="w3-circle" style="height:45px;width:45px" alt="donal"> </div>
+              <div class="incoming_msg_img"><img src="img/eltro.jpeg" class="w3-circle" style="height:40px;width:40px" alt="img"> </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>Test which is a new approach to have all
@@ -224,7 +226,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                 <span class="time_date"> 11:03 AM    |    August 8</span> </div>
             </div>
             <div class="incoming_msg">
-              <div class="incoming_msg_img"><img src="http://www.rockandpop.cl/wp-content/uploads/2018/01/do.jpg" class="w3-circle" style="height:45px;width:45px" alt="donal"></div>
+              <div class="incoming_msg_img"><img src="img/eltro.jpeg" class="w3-circle" style="height:40px;width:40px" alt="img"></div>
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>Test, which is a new approach to have</p>
@@ -237,7 +239,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                 <span class="time_date"> 11:07 AM    |    August 8</span> </div>
             </div>
             <div class="incoming_msg">
-              <div class="incoming_msg_img"><img src="http://www.rockandpop.cl/wp-content/uploads/2018/01/do.jpg" class="w3-circle" style="height:45px;width:45px" alt="donal"></div>
+              <div class="incoming_msg_img"><img src="img/eltro.jpeg" class="w3-circle" style="height:40px;width:40px" alt="img"></div>
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>We work directly with our designers and suppliers,
@@ -256,8 +258,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         </div>
       </div>
 
-
-      <p class="text-center top_spac"> Private Chat of : <a target="_blank" href="perfil.html">------</a></p>
+        <p class="text-center top_spac w3-margin"> Private Chat of : <a target="_blank" href="perfil.php">------</a></p>
 
     </div></div>
 
@@ -270,7 +271,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
           <hr class="bottom-line white-bg">
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="loction-info white">
             <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>A99 Adam Street<br>Texas, TX 555072</p>
             <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@baker.com</p>

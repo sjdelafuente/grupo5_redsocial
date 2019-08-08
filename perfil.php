@@ -56,8 +56,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Profile</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
     <a href="#contactenme" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="chat.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-comments fa-fw w3-margin-right"></i>CHAT</a>
-    <a href="setting.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw w3-margin-right"></i>SETTING</a>
+    <a href="chat.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-comments fa-fw w3-margin-right"></i>CHAT</a>
+    <a href="setting.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw w3-margin-right"></i>SETTING</a>
   </div>
   <div id="redes-sociales" class="w3-panel w3-large">
    <a id="red-social" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-text-teal"></i></a>
@@ -108,7 +108,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
        </div>
        <br>
        <div class="w3-bar-block">
-         <a href="login.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-power-off fa-fw w3-margin-right"></i>Sign off</a>
+         <a href="cerrarsession.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-power-off fa-fw w3-margin-right"></i>Sign off</a>
        </div>
 </nav>
 
@@ -120,41 +120,41 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 
-<!-- Header-perfil  -->
-  <div id="contact" class="header-profile">
-    <div id="header-iconos" class="w3-bar w3-theme-d2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"></a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:250px">
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+  <!-- Header-perfil  -->
+    <div id="contact" class="header-profile">
+      <div id="header-iconos" class="w3-bar w3-theme-d2 w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"></a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:250px">
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port04.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Nicole Rojas </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port05.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Susana Rey </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port06.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Carlos Mendez </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+        </div>
       </div>
-    </div>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <a href="chat.html"><button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-envelope w3-text-white w3-hover-text-black"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button></a>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:325px">
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> private message...</a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Sebastian Piñera:</strong> consult publication...</a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Mauricio Macri:</strong> tell me day and time...</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a href="chat.html"><button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-envelope w3-text-white w3-hover-text-black"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button></a>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:325px">
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Eltro:</strong> private message...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/garrett.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Sebastian Gomez:</strong> consult publication...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/lucas.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Mauricio Martinez:</strong> tell me day and time...</a>
+        </div>
       </div>
-    </div>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:335px">
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-thumbs-up w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> likes your post</a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-share w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> has shared your post</a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-comments w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> commented on your post</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:335px">
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-thumbs-up w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> likes your post.</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-share w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> has shared your post.</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-comments w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> commented on your post.</a>
+        </div>
       </div>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+      <a style="text-decoration:none;" id="logohosthelper" href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-street-view w3-margin-right"></i><strong>HostHelper</strong></a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+        <img src="img/pablo.jpg" class="w3-circle" style="height:35px;width:35px" alt="Pablo">
+      </a>
     </div>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-    <a style="text-decoration:none;" id="logohosthelper" href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-street-view w3-margin-right"></i><strong>HostHelper</strong></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-      <img src="img/pablo.jpg" class="w3-circle" style="height:35px;width:35px" alt="Pablo">
-    </a>
-  </div>
-   </div>
+     </div>
 
   <!-- Header -->
   <header id="portfolio">
@@ -165,9 +165,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span>
       <button class="w3-button w3-black">ALL</button>
-      <a href="#post"><button class="w3-button w3-white"><i class="fa fa-photo w3-margin-right"></i>Posts</button></a>
-      <a href="#offers"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-bed w3-margin-right"></i>Travel offers</button>
-      <a href="#"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-phone w3-margin-right"></i><i class="fa fa-at w3-margin-right"></i>Contact person</button>
+      <a href="#post" onclick="w3_close()"><button class="w3-button w3-white"><i class="fa fa-photo w3-margin-right"></i>Posts</button></a>
+      <a href="#offers" onclick="w3_close()"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-bed w3-margin-right"></i>Travel offers</button>
+      <a href="#contactenme" onclick="w3_close()"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-phone w3-margin-right"></i><i class="fa fa-at w3-margin-right"></i>Contact person</button>
     </div>
     </div>
   </header>
@@ -316,7 +316,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+  <div class="w3-container" style="margin-bottom:32px">
     <h4><b>About Me</b></h4>
     <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
     <hr>
@@ -399,7 +399,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
 
   <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
+  <div id="contactenme" class="w3-container w3-grey">
     <h4 ><b>Contact User</b></h4>
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
       <div class="w3-third w3-black">
@@ -442,7 +442,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
           <hr class="bottom-line white-bg">
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="loction-info white">
             <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>A99 Adam Street<br>Texas, TX 555072</p>
             <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@baker.com</p>

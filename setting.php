@@ -1,3 +1,9 @@
+<?php
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,20 +45,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <i class="fa fa-remove"></i>
     </a>
     <img src="img/pablo.jpg" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>Firstname Lastname</b></h4>
-    <p class="w3-text-grey">Bienvenido ... </p>
+    <h4><b> firstname Lastname </b></h4>
+    <p class="w3-text-grey" value="">Bienvenido ... </p>
   </div>
   <!-- Profile -->
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Edit Profile</a>
     <a href="#required" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock fa-fw w3-margin-right"></i>Required</a>
     <a href="#optional" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-unlock-alt fa-fw w3-margin-right"></i>Optional</a>
-    <a href="#optional" class="w3-bar-item w3-button w3-padding"><i class="fa fa-camera fa-fw w3-margin-right"></i>Photos</a>
+    <a href="#optional" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-camera fa-fw w3-margin-right"></i>Photos</a>
   </div>
   <div class="w3-bar-block">
     <hr>
-    <a href="perfil.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>View profile</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-power-off fa-fw w3-margin-right"></i>Sign off</a>
+    <a href="perfil.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>View profile</a>
+    <a href="cerrarsession.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-power-off fa-fw w3-margin-right"></i>Sign off</a>
   </div>
 
 </nav>
@@ -72,25 +78,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-user"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:250px">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-secret w3-margin-right"></i><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port04.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Nicole Rojas </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port05.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Susana Rey </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/port06.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Carlos Mendez </strong><input type="button" class="btn w3-teal w3-hover-black" value="Confirm"> /   <input type="reset" class="btn w3-white w3-hover-gray" value="Delete"></a>
         </div>
       </div>
       <div class="w3-dropdown-hover w3-hide-small">
         <a href="chat.html"><button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-envelope w3-text-white w3-hover-text-black"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button></a>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:325px">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> private message...</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Sebastian Piñera:</strong> consult publication...</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user w3-margin-right"></i><strong class="w3-text-teal">Mauricio Macri:</strong> tell me day and time...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Eltro:</strong> private message...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/garrett.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Sebastian Gomez:</strong> consult publication...</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/lucas.jpg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><strong class="w3-text-teal">Mauricio Martinez:</strong> tell me day and time...</a>
         </div>
       </div>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-button w3-padding-large w3-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-teal">3</span></button>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:335px">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-thumbs-up w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> likes your post</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-share w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> has shared your post</a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-comments w3-margin-right"></i><strong class="w3-text-teal">Donald Trump:</strong> commented on your post</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-thumbs-up w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> likes your post.</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-share w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> has shared your post.</a>
+          <a href="#" class="w3-bar-item w3-button"><img src="img/eltro.jpeg" class="w3-circle w3-margin-right" style="height:35px;width:35px;border:1px solid gray;" alt="img"><i class="fa fa-comments w3-margin-right"></i><strong class="w3-text-teal">Eltro:</strong> commented on your post.</a>
         </div>
       </div>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
@@ -111,7 +117,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <span class="w3-margin-right">Filter:</span>
       <a href="#required" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><button class="w3-button w3-white"><i class="fa fa-lock w3-margin-right"></i>Required</button></a>
       <a href="#optional" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-unlock-alt w3-margin-right"></i>Optional</button></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding w3-text-teal"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-camera w3-margin-right"></i>Photos</button></a>
+      <a href="#optional" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-camera w3-margin-right"></i>Photos</button></a>
     </div>
     </div>
   </header>
@@ -121,12 +127,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div id="setting" >
 
     <div class="setting">
-      <form id="required" class="required" action="perfil.html" method="post">
         <div class="container">
       <h1>Required</h1>
   	<div class="row">
         <!-- edit form column -->
-        <div class="col-md-9 personal-info">
+        <div class="col-md-7 personal-info">
           <hr>
           <div class="alert alert-info alert-dismissable">
             <a class="panel-close close" data-dismiss="alert">×</a>
@@ -135,36 +140,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           </div>
           <h3>Personal info</h3>
 
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" action="setting.php" role="form" method="post">
             <div class="form-group">
               <label class="col-lg-3 control-label">First name:</label>
               <div id="color-input" class="col-lg-8">
-                <input class="form-control" type="text" value="Pablo">
+                <input class="form-control" type="text" value="" name="firstname">
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Last name:</label>
               <div id="color-input" class="col-lg-8">
-                <input class="form-control" type="text" value="Bishop">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-3 control-label">Email:</label>
-              <div id="color-input" class="col-lg-8">
-                <input class="form-control" type="text" value="pablo123@gmail.com">
+                <input class="form-control" type="text" value="" name="lastname">
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Where do you live?</label>
               <div id="color-input" class="col-lg-8">
-                <input class="form-control" type="text" value="Buenos aires , Argentina">
+                <input class="form-control" type="text" value="place">
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Sex:</label>
               <div class="col-lg-8">
                 <div id="color-select" class="ui-select">
-                  <select id="user_time_zone" class="form-control">
+                  <select id="user_time_zone" class="form-control" name="sex">
                     <option value="Men">Men</option>
                     <option value="Woman">Woman</option>
                     <option value="Other">Other</option>
@@ -243,7 +242,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
               </div>
               <div class="col-lg-2">
                 <div id="color-select" class="ui-select">
-                  <select id="month" class="form-control">
+                  <select id="month" name="month" class="form-control">
                     <option selected="selected" value="month">Month</option>
                     <option value="Januari">Januari</option>
                     <option value="February">February</option>
@@ -261,7 +260,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                 </div>
               </div>
               <div class="col-lg-3">
-                <div id="color-select" class="ui-select">
+                <div id="color-select" Name="day" class="ui-select">
                   <select class="form-control">
                     <option selected="day" value="day">Day</option>
                     <option value="1">1</option>
@@ -300,27 +299,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-3 control-label">Username:</label>
-              <div id="color-input" class="col-md-8">
-                <input class="form-control" type="text" value="janeuser">
+              <label class="col-lg-3 control-label">Email:</label>
+              <div id="color-input" class="col-lg-8">
+                <input class="form-control" type="text" value="" name="email">
               </div>
             </div>
             <div class="form-group">
               <label class="col-md-3 control-label">Password:</label>
               <div id="color-input" class="col-md-8">
-                <input class="form-control" type="password" value="11111122333">
+                <input class="form-control" type="password" value="" name="password">
               </div>
             </div>
             <div class="form-group">
               <label class="col-md-3 control-label">Confirm password:</label>
               <div id="color-input" class="col-md-8">
-                <input class="form-control" type="password" value="11111122333">
+                <input class="form-control" type="password" value="" name="confirm_password">
               </div>
             </div>
             <div class="form-group">
               <label class="col-md-3 control-label"></label>
               <div class="col-md-8">
-                <input type="button" class="btn w3-teal w3-hover-black" value="Save Changes">
+                <input type="submit" class="btn w3-teal w3-hover-black" value="Save Changes">
                 <span></span>
                 <input type="reset" class="btn w3-white w3-hover-gray" value="Cancel">
               </div>
@@ -332,12 +331,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <hr>
 
 <!-- NOTE: Optional  -->
-  <form id="optional" class="optional" action="perfil.html" method="post">
+
     <div class="container">
   <h1>Optional</h1>
 <div class="row">
     <!-- edit form column -->
-    <div class="col-md-9 personal-info">
+    <div class="col-md-7 personal-info">
       <hr>
       <div class="alert alert-info alert-dismissable">
         <a class="panel-close close" data-dismiss="alert">×</a>
@@ -358,7 +357,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input type="button" class="btn w3-teal w3-hover-black" value="Save Changes">
+            <input type="submit" class="btn w3-teal w3-hover-black" value="Save Changes">
             <span></span>
             <input type="reset" class="btn w3-white w3-hover-gray" value="Cancel">
           </div>
@@ -381,7 +380,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
           <hr class="bottom-line white-bg">
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="loction-info white">
             <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>A99 Adam Street<br>Texas, TX 555072</p>
             <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@baker.com</p>
