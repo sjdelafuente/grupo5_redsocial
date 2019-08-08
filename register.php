@@ -1,15 +1,3 @@
-<?php
-if(isset($_POST['submit'])) {
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-}
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,79 +1,78 @@
 <?php
 
-$password="";
+$errores = [
 
-$confirm_password="";
+];
 
+//Si el formulario fue 'submitted'...
+if(isset($_POST['submit'])){
+ 
+    //Obtener los valores de los campos del formulario.
+    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
+    $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : null;
+    $email = isset($_POST['email']) ? $_POST['email'] : null;
+    $password = isset($_POST['password']) ? $_POST['password'] : null;
+    $confirm_password = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : null;
+    //Hashing de la contraseña.
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $verify = password_verify($confirm_password, $hash);
+ 
+    //NOMBRE
+    if(empty($nombre)){
+        $errores[] = "Debes ingresar un nombre.";
+    }elseif(is_numeric($nombre)){
+        $errores[] = "Su nombre debe contener letras.";
+    }elseif(!empty($nombre) && is_numeric($nombre)){
+        $errores[] = "Su nombre no debe contener numeros.";
+    }
 
-if($_POST) {
-    
-    $password=$_POST["password"];
-    $confirm_password=$_POST["confirm_password"];
+    //NOMBRE != APELLIDO
 
-    
-    // NOMBRE //
-    if(strlen($_POST["nombre"]) == 0){
-        echo "<p class='error'> * Debes agregar tu nombre. </p>";
-      }
-    if(strlen($_POST["nombre"] == 1)){
-        echo "<p class='error'> * Su nombre debe contener más de 1 letra. </p>"; 
+    if($nombre === $apellido){
+        $errores[] = "Nombre y apellido no pueden ser iguales.";
     }
-    if(strlen($_POST["nombre"] > 18)){
-        echo "<p class='error'> * Su nombre es demasiado largo. </p>"; 
+
+    //APELLIDO
+    if(empty($apellido)){
+        $errores[] = "Debes ingresar un apellido.";
+    }elseif(is_numeric($apellido)){
+        $errores[] = "Su apellido debe contener letras.";
+    }elseif(!empty($apellido) && is_numeric($apellido)){
+        $errores[] = "Su apellido no debe contener numeros.";
     }
-    if(is_numeric($_POST["nombre"])){
-        echo "<p class='error'> * Su nombre no debe contener números. </p>"; 
-    }
-    // APELLIDO //
-    if(strlen($_POST["apellido"]) == 0){
-        echo "<p class='error'> * Debes agregar tu apellido. </p>";
-    }
-    if(strlen($_POST["apellido"] == 1)){
-        echo "<p class='error'> * Su apellido debe contener más de 1 letra. </p>"; 
-    }
-    if(strlen($_POST["apellido"] > 18)){
-        echo "<p class='error'> * Su apellido es demasiado largo. </p>"; 
-    }
-    if(is_numeric($_POST["apellido"])){
-        echo "<p class='error'> * Su apellido no debe contener números. </p>"; 
-    }
-    // EMAIL //
-    if(!strlen($_POST["email"]) == 0){
-        if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-            echo "<p class='error'> * Tu email es incorrecto. </p>";
+
+    //EMAIL
+    if(empty($email) ){
+        $errores[] = "Debes ingresar un email.";
+    } else {
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $errores[] = "El correo es incorrecto.";
         }
-
-    } else {echo "<p class='error'> * Debes agregar tu email. </p>";
     }
-    
 
-    // PASSWORD //
+    //PASSWORD
+    if(strlen($password) === 0){
+        $errores[] = "Debes ingresar una contraseña.";
+    }   
 
-    $hash_password=password_hash($password,PASSWORD_DEFAULT);
-
-    $resultado_password=password_verify($password,$hash_password);
-
-
-    
-    if(strlen($password) == 0 && strlen($confirm_password) == 0){
-        echo "<p class='error'> * Debes generar tu contraseña. </p>";
+    if(strlen($password) > 0 && strlen($confirm_password) === 0){
+        $errores[] = "Debes confirmar la contraseña.";
     }
-    if(strlen($password) == 0 && strlen($confirm_password) > 0){
-        echo "<p class='error'> * Debes generar tu contraseña. </p>";
+
+    if(strlen($confirm_password) > 0 && strlen($password) === 0){
+        $errores[] = "Debes escribir la contraseña primero, luego confirmarla.";
     }
-    if(strlen($password) > 0 && strlen($confirm_password) == 0){
-        echo "<p class='error'> * Debes confirmar tu contraseña. </p>";
+
+    if($verify == false){
+        $errores[] = "Las contraseñas deben coincidir.";
     }
-    if(strlen($password) > 0 && strlen($confirm_password) > 0 && $password !== $confirm_password){
-        echo "<p class='error'> * Confirme correctamente su contraseña. </p>";
+
+    // Ejecucion final del formulario.
+    if(!empty($errores)){
+        foreach ($errores as $error) {
+            echo "<p class='error'> $error</p>";
+        }
+    } else {
+        header("location: index.php");
     }
-}
-
-
-
-    
-    
-
-
-
-
+} 
