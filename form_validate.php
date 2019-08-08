@@ -20,25 +20,27 @@ if(isset($_POST['submit'])){
     //NOMBRE
     if(empty($nombre)){
         $errores[] = "Debes ingresar un nombre.";
-    }elseif(is_numeric($nombre)){
-        $errores[] = "Su nombre debe contener letras.";
-    }elseif(!empty($nombre) && is_numeric($nombre)){
-        $errores[] = "Su nombre no debe contener numeros.";
+    }
+    if(!empty($nombre)){
+        if(!preg_match('/^(?=.{3,18}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/', $nombre)){
+            $errores[] = "El nombre debe contener solo espacios y letras.";
+            }
     }
 
     //NOMBRE != APELLIDO
 
-    if($nombre === $apellido){
+    if($nombre == $apellido){
         $errores[] = "Nombre y apellido no pueden ser iguales.";
     }
 
     //APELLIDO
     if(empty($apellido)){
         $errores[] = "Debes ingresar un apellido.";
-    }elseif(is_numeric($apellido)){
-        $errores[] = "Su apellido debe contener letras.";
-    }elseif(!empty($apellido) && is_numeric($apellido)){
-        $errores[] = "Su apellido no debe contener numeros.";
+    }
+    if(!empty($apellido)){
+        if(!preg_match('/^(?=.{3,18}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/', $apellido)){
+            $errores[] = "El apellido debe contener solo espacios y letras.";
+            }
     }
 
     //EMAIL
