@@ -2,6 +2,48 @@
 
 require_once('validacion_contacto.php');
 
+session_start();
+
+function saludo(){
+  if (isset($_SESSION['saludo'])) {
+    return $_SESSION['saludo'];
+  } else {
+    return 'Welcome to Host Helper';
+  }
+}
+
+function hipervinculo(){
+  if (isset($_SESSION['saludo'])) {
+    return 'cerrarsession.php';
+  } else {
+    return 'register.php';
+  }
+}
+
+function opcion(){
+  if (isset($_SESSION['saludo'])) {
+    return 'Cerrar Sesion';
+  } else {
+    return 'Registrarse';
+  }
+}
+
+function perfil(){
+  if (isset($_SESSION['saludo'])) {
+    return 'Ir a perfil';
+  } else {
+    return 'Iniciar Sesion';
+  }
+}
+
+function irAPerfil(){
+  if (isset($_SESSION['saludo'])) {
+    return 'perfil.php';
+  } else {
+    return 'login.php';
+  }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +64,7 @@ require_once('validacion_contacto.php');
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  
+
 </head>
 
 <body>
@@ -46,7 +88,7 @@ require_once('validacion_contacto.php');
               <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="#main-header">Home</a></li>
-                  <li class=""><a href="#feature">About</a></li>                  
+                  <li class=""><a href="#feature">About</a></li>
                   <li class=""><a href="#portfolio">Activities</a></li>
                   <li class=""><a href="#testimonial">Feedbacks</a></li>
                   <li class=""><a href="#blog">Whats New</a></li>
@@ -60,12 +102,12 @@ require_once('validacion_contacto.php');
           <div class="container">
             <div class="row">
               <div class="banner-info text-center wow fadeIn delay-05s">
-                
-                <h2 class="bnr-sub-title">Welcome to Host Helper</h2>
+
+                <h2 class="bnr-sub-title"><?= saludo() ?></h2>
                 <p class="bnr-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <br>ex ea commodo consequat.</p>
                 <div class="brn-btn">
-                  <a href="register.php" class="btn btn-download" target="_blank">Registrarse</a>
-                  <a href="login.php" class="btn btn-more" target="_blank">Iniciar Sesion</a>
+                  <a href="<?= hipervinculo() ?>" class="btn btn-download"><?= opcion() ?></a>
+                  <a href="<?= irAPerfil() ?>" class="btn btn-more"><?= perfil() ?></a>
                 </div>
                 <div class="overlay-detail">
                   <a href="#feature"><i class="fas fa-angle-down"></i></a>
@@ -399,7 +441,7 @@ require_once('validacion_contacto.php');
           </div>
 
 
-          
+
 
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="contact-form">
@@ -407,41 +449,41 @@ require_once('validacion_contacto.php');
                  <div class="col-md-6 padding-right-zero">
                   <div class="form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" value='<?php if(!$enviado && isset($nombre)) echo $nombre ?>' SELECTED />
-                  
+
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value='<?php if(!$enviado && isset($email)) echo $email ?>' SELECTED  />
-                    
+
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value='<?php if(!$enviado && isset($subject)) echo $subject ?>' SELECTED  />
-                    
+
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <textarea class="form-control" name="message" rows="5" placeholder="Leave a message" value='<?php if(!$enviado && isset($subject)) echo $subject ?>' SELECTED></textarea>
-                  
+
                   </div>
                   <?php if(!empty($errores)) : ?>
                   <div class="alert alert-danger">
 
                     <?php echo  $errores; ?>
                     </div>
-                    
+
                     <?php elseif($enviado): ?>
                       <div class="alert alert-success">
                         <p>Enviado correctamente</p>
-                      
-                      </div>  
-                  
-                  
+
+                      </div>
+
+
                   <?php endif ; ?>
-                  
+
                   <button type="submit" name="enviar" class="btn btn-primary btn-submit">SEND NOW</button>
                 </div>
               </form>
@@ -463,7 +505,7 @@ require_once('validacion_contacto.php');
         </div>
       </div>
     </footer>
-    
+
   </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
