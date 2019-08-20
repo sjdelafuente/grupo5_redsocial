@@ -1,19 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Host Helper</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" href="css/register.css">
-</head>
+<?php require_once ('form_validate.php'); ?>
+<?php
+
+  if($_POST) {
+      // Validamos los campos
+      if (length(old('nombre'), 2, 255)) {
+        addError('nombre', "Su nombre debe contener más de 2 caracteres.");
+      }
+      if(!preg_match('/^(?=.{3,18}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/', old('nombre'))) {
+        addError('nombre', "Su nombre contiene caracteres incorrectos.");
+      }
+      if (empty(old('nombre'))) {
+        addError('nombre', "Debe introducir su nombre.");
+      }
+      if (length(old('apellido'), 2, 255)) {
+        addError('apellido', "Su apellido debe contener más de 2 caracteres.");
+      }
+      if(!preg_match('/^(?=.{3,18}$)[a-zñA-ZÑ](\s?[a-zñA-ZÑ])*$/', old('apellido'))) {
+        addError('apellido', "Su apellido contiene caracteres incorrectos.");
+      }
+      if (empty(old('apellido'))) {
+        addError('apellido', "Debe introducir su apellido.");
+      }
+      if (!email(old('email'))) {
+        addError('email', "Debes escribir un email válido.");
+      }
+      if (length(old('password'), 8, 12)) {
+        addError('password', "Su password debe contener entre 8 y 12 caracteres.");
+      }
+      if (empty(old('password'))) {
+        addError('password', "Debe introducir su password.");
+      }
+      if (old('password') !== old('confirm_password')) {
+        addError('confirm_password', "Tus passwords deben coincidir.");
+      }
+      if (empty(old('confirm_password'))) {
+        addError('confirm_password', "Debe confirmar su password.");
+      }
+      if (isValid()) {
+        $_SESSION['saludo'] = 'Welcome ' . old('nombre');
+        header('location: index.php');
+      }
+}
+?>
+
+<?php require_once ('partials/headregister.php'); ?>
 <body>
     <!--REGISTER MAIN FORM-->
     <div class="bg-color">
@@ -29,47 +60,55 @@
                         </div>
                         <div class="row align-items-center">
                           <div class="col mt-4">
-                            <input type="text" class="form-control" name="nombre" value="<?php if(isset($_POST["nombre"])) echo $_POST["nombre"] ?>" placeholder="Enter your first name...">
+                            <input type="text" class="form-control" name="nombre" value="<?= old('nombre') ?>" placeholder="Enter your first name...">
+                          <?php if (hasError('nombre')) : ?>
+                          <p class="error"><?= getError('nombre') ?></p>
+                          <?php endif ?> 
                           </div>
                         </div>
                         <div class="row align-items-center">
                             <div class="col mt-4">
-                                <input type="text" class="form-control" name="apellido" value="<?php if(isset($_POST["apellido"])) echo $_POST["apellido"] ?>" placeholder="Enter your last name...">
+                                <input type="text" class="form-control" name="apellido" value="<?= old('apellido') ?>" placeholder="Enter your last name...">
+                                <?php if (hasError('apellido')) : ?>
+                                <p class="error"><?= getError('apellido') ?></p>
+                                <?php endif ?> 
                             </div>
                         </div>
                         <div class="row align-items-center mt-4">
                           <div class="col">
-                            <input type="email" class="form-control" name="email" value="<?php if(isset($_POST["email"])) echo $_POST["email"] ?>" placeholder="Email">
+                            <input type="email" class="form-control" name="email" value="<?= old('email') ?>" placeholder="Email">
+                            <?php if (hasError('email')) : ?>
+                            <p class="error"><?= getError('email') ?></p>
+                            <?php endif ?> 
                           </div>
                         </div>
                         <div class="row align-items-center mt-4">
                           <div class="col">
-                            <input type="password" class="form-control" name="password" value="<?php if(isset($_POST["password"])) echo $_POST["password"] ?>" placeholder="Password">
+                            <input type="password" class="form-control" name="password" value="<?= old('password') ?>" placeholder="Password">
+                          <?php if (hasError('password')) : ?>
+                          <p class="error"><?= getError('password') ?></p>
+                          <?php endif ?> 
                           </div>
                           <div class="col">
-                            <input type="password" class="form-control" name="confirm_password" value="<?php if(isset($_POST["confirm_password"])) echo $_POST["confirm_password"] ?>" placeholder="Confirm Password">
+                            <input type="password" class="form-control" name="confirm_password" value="<?= old('confirm_password') ?>" placeholder="Confirm Password">
+                          <?php if (hasError('confirm_password')) : ?>
+                          <p class="error"><?= getError('confirm_password') ?></p>
+                          <?php endif ?> 
                           </div>
                         </div>
                         <div class="row justify-content-start mt-3">
                           <div class="col">
-                            <input class="btn btn-success mt-3" type="submit" name="submit" value="REGISTER">
-                            <?php require_once('form_validate.php'); ?>
+                            <input class="btn btn-success mt-3" type="submit" name="submit" value="Register">
+                            <?php if(hasError('submit')) : ?>
+                            <p class="error"><?= getError('submit') ?>
+                            <?php endif ?>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </form>
-                                <!--FOOTER-->
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-body">
-                                    <h5 class="card-title">We want you to ride the world...</h5>
-                                    <p class="card-text">Check your future destinies!</p>
-                                    <a href="index.html" class="btn btn-primary">HOME</a>
-                              </div>
-                          </div>
-                        </div>
+    <?php require_once ('partials/footerRegister.php'); ?>
     </div>
 </body>
 </html>
