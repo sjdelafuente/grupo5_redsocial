@@ -16,6 +16,8 @@ session_start();
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 
+    
+
     $errores = [];
 
 

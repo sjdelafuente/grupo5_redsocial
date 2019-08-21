@@ -1,5 +1,8 @@
 <?php
-// NOTE: usuario cambia foto de perfil
+
+require_once('form_validate.php');
+
+
 
 $resultado = null;
 
@@ -11,12 +14,13 @@ if (isset($_POST['formulario']))
   $size = $_FILES['imagen']['size'];
   $type = $_FILES['imagen']['type'];
   $ext = pathinfo($_FILES['imagen']['name'],PATHINFO_EXTENSION);
+  
   if ($error)
    {
   $resultado = "Ha ocurrido un error";
   var_dump($error);
   }
-  else if ($ext != 'jpg' && ext !='jpeg' && $ext !='png') {
+  else if ($ext != 'jpg' && $ext !='jpeg' && $ext !='png') {
   $resultado = 'Archivos permitidos jpg,jpeg,png.';
   }
   else {
