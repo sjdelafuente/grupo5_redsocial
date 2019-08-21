@@ -12,8 +12,22 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: cyan;
     transition: all .3s;
+}
+
+.error {
+    margin-top: 44px;
+    color: red;
+    font-weight: bold;
+}
+
+.panel {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.panel-info > .panel-heading {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .bg-color {
@@ -34,7 +48,10 @@ a:hover {
 .login-remember {
     font-weight: bold;
     color: white;
-    margin-left: 4px;
+}
+
+.accQuestion {
+    color: cyan;
 }
 
 .text-center {

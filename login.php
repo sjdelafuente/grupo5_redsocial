@@ -1,30 +1,25 @@
+<?php require_once ('form_validate.php'); ?>
 <?php
-
-
+    if($_POST) {
+              // Validamos los campos
+      if (empty(old('user'))) {
+        addError('user', "Debe introducir su email.");
+      }
+      if (empty(old('password'))) {
+        addError('password', "Debe introducir su password.");
+      }
+      if(isValid()) {
+          header('location: perfil.php');
+      }
+    }
 ?>
+<?php require_once('partials/headLogin.php'); ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Host Helper</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" href="css/login.css">
-</head>
 <body>
     <!--LOGIN MAIN FORM-->
         <div class="bg-color">
             <div class="container">
-              <div class="row justify-content-center">
+              <div class="column justify-content-center">
                             <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                                 <div class="panel panel-info" >
                                         <div class="panel-heading">
@@ -34,15 +29,21 @@
 
                                         <div style="padding-top:30px" class="panel-body">
 
-                                            <form id="loginform" class="form-horizontal" role="form">
+                                            <form action="login.php" class="form-horizontal" method="post">
 
                                                 <div style="margin-bottom: 25px" class="input-group">
-                                                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
-                                                        </div>
+                                                    <input id="login-username" type="text" class="form-control" name="user" placeholder="Write your email...">
+                                                        <?php if (hasError('user')) : ?>
+                                                        <p class="error"><?= getError('user') ?></p>
+                                                        <?php endif ?> 
+                                                </div>
 
-                                                <div style="margin-bottom: 25px" class="input-group">
-                                                            <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
-                                                        </div>
+                                                <div style="margin-bottom: 4px" class="input-group">
+                                                    <input id="login-password" type="password" class="form-control" name="password"  placeholder="Write your password...">
+                                                        <?php if (hasError('password')) : ?>
+                                                        <p class="error"><?= getError('password') ?></p>
+                                                        <?php endif ?> 
+                                                </div>
 
 
 
@@ -55,13 +56,11 @@
                                                         </div>
 
 
-                                                    <div style="margin-top:10px" class="form-group">
+                                                    <div style="margin-top:14px" class="form-group">
                                                         <!-- Button -->
 
                                                         <div class="col-sm-12 controls">
-                                                          <a id="btn-login" href="#" class="btn btn-success">Login  </a>
-                                                          <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
-
+                                                          <input type="submit" name="submit" class="btn btn-success" value="Login">
                                                         </div>
                                                     </div>
 
@@ -69,9 +68,9 @@
                                                     <div class="form-group">
                                                         <div class="col-md-12 control">
                                                             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
-                                                                Don't have an account!
-                                                            <a href="register.html" target="_blank">
-                                                                Register Here!
+                                                                <p class="accQuestion"> Don't have an account? </p>
+                                                            <a class="btn btn-primary" href="register.php" target="_blank">
+                                                                Register Here
                                                             </a>
                                                             </div>
                                                         </div>
@@ -82,16 +81,7 @@
                             </div>
                         </div>
               </div>
-              <!--FOOTER-->
-              <div class="card text-center">
-                      <div class="card-header">
-                          <div class="card-body">
-                              <h5 class="card-title">We want you to ride the world...</h5>
-                              <p class="card-text">Check your future destinies!</p>
-                              <a href="index.html" class="btn btn-primary">HOME</a>
-                            </div>
-                        </div>
-              </div>
+<?php require_once ('partials/footerLogin.php'); ?>
             </div>
         </div>
 </body>
