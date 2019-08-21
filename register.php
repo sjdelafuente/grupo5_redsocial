@@ -1,6 +1,16 @@
+
+
+
 <!DOCTYPE html>
+
+
+
+<?php require_once('pdoRegister.php');?>
 <?php require_once ('form_validate.php'); ?>
+
+
 <?php
+
 
   if($_POST) {
       // Validamos los campos
