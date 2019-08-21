@@ -1,8 +1,7 @@
 <?php
-
+ session_start();
+ require('validation_setting.php');
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -44,9 +43,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="img/pablo.jpg" style="width:45%;" class="w3-round"><br><br>
-    <h4><b> firstname Lastname </b></h4>
-    <p class="w3-text-grey" value="">Bienvenido ... </p>
+    <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="width:45%;" class="w3-round"><br><br>
+    <h4><b><?= $_SESSION['nombre-edit'] ?? $_SESSION['nombre'] ?? 'Firstname' ?> <?= $_SESSION['apellido-edit'] ?? $_SESSION['apellido'] ?? 'Lastname' ?> </b></h4>
+    <p class="w3-text-grey" value="">Edit your profile ... </p>
   </div>
   <!-- Profile -->
   <div class="w3-bar-block">
@@ -103,14 +102,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <a href="index.hp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
       <a style="text-decoration:none;" id="logohosthelper" href="index.hp" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-street-view w3-margin-right"></i><strong>HostHelper</strong></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-        <img src="img/pablo.jpg" class="w3-circle" style="height:35px;width:35px" alt="Pablo">
+        <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" class="w3-circle" style="height:35px;width:35px" alt="imagen">
       </a>
     </div>
      </div>
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="#"><img src="img/pablo.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <a href="#"><img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1><b>Edit profile</b></h1>
@@ -342,17 +341,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="alert alert-info alert-dismissable">
         <a class="panel-close close" data-dismiss="alert">×</a>
         <i class="fa fa-coffee"></i>
-        This is an <strong>.alert</strong>. Use this to show important messages to the user.
+        <?= $resultado ?? 'This is an <strong>alert</strong> Use this to show important messages to the user.' ?>
       </div>
       <h3>Photo</h3>
 
-      <form class="form-horizontal" role="form">
+      <form class="form-horizontal" role="form" enctype="multipart/form-data" action="setting.php" method="post">
         <!-- left column -->
     <div id="color-input" class="col-md-6">
       <div class="text-center">
-        <img src="img/pablo.jpg" style="width:45%;" class="w3-round"><br>
+        <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="width:45%;" class="w3-round"><br>
         <h6>Upload a different photo...</h6>
-        <input type="file" class="form-control">
+        <input type="file" class="form-control" name="imagen">
+        <input type="hidden" name="formulario" value="">
       </div>
     </div>
         <div class="form-group">

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+require('validation_setting.php');
 
  ?>
 
@@ -44,8 +45,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="img/pablo.jpg" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>firstname lastname</b></h4>
+    <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="width:45%;" class="w3-round"><br><br>
+    <h4><b><?= $_SESSION['nombre-edit'] ?? $_SESSION['nombre'] ?? 'Firstname' ?> <?= $_SESSION['apellido-edit'] ?? $_SESSION['apellido'] ?? 'Lastname' ?> </b></h4>
     <p class="w3-text-grey">Bienvenido ... </p>
   </div>
   <!-- Profile -->
@@ -54,7 +55,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Digital House</p>
     <p><i class="fa fa-home fa-fw w3-margin-right"></i>Argentina, Buenos Aires</p>
     <p><i class="fa fa-birthday-cake fa-fw w3-margin-right"></i>June 20, 1995</p>
-    <a href="#" class="w3-bar-block w3-text-teal w3-hover-text-black" style="text-decoration:none;"><i class="fa fa-envelope-open fa-fw w3-margin-right"></i>Username@gmail.com</a>
+    <a href="#" class="w3-bar-block w3-text-teal w3-hover-text-black" style="text-decoration:none;"><i class="fa fa-envelope-open fa-fw w3-margin-right"></i><?= $_SESSION['email-edit'] ?? $_SESSION['email'] ?? 'email-user' ?></a>
   </div>
   <hr>
 
@@ -158,14 +159,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <a href="index.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
       <a style="text-decoration:none;" id="logohosthelper" href="index.php" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 w3-hover-white"><i class="fa fa-street-view w3-margin-right"></i><strong>HostHelper</strong></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-        <img src="img/pablo.jpg" class="w3-circle" style="height:35px;width:35px" alt="Pablo">
+        <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" class="w3-circle" style="height:35px;width:35px" alt="Pablo">
       </a>
     </div>
      </div>
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="#"><img src="img/pablo.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <a href="#"><img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="height:75px;width:75px" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1><b>My Profile</b></h1>
@@ -197,7 +198,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
 
     <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-      <img src="img/pablo.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="height:45px;width:45px">
       <span class="w3-right w3-opacity">1 min</span>
       <h4>John Doe</h4><br>
       <hr class="w3-clear">
@@ -215,7 +216,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
 
     <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-      <img src="img/lucas.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <img src="img/lucas.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="height:45px;width:45px">
       <span class="w3-right w3-opacity">16 min</span>
       <h4>Jane Doe</h4><br>
       <hr class="w3-clear">
@@ -225,7 +226,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
 
     <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-      <img src="img/garrett.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <img src="img/garrett.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="height:45px;width:45px">
       <span class="w3-right w3-opacity">32 min</span>
       <h4>Angie Jane</h4><br>
       <hr class="w3-clear">
