@@ -43,7 +43,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="width:45%;" class="w3-round"><br><br>
+    <img src="perfil/<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?>" style="width:45%;" class="w3-round" value="<?= $_SESSION['perfil'] ?? 'usuario.jpg' ?> " 
+
+    
+    <?php if ($ext != 'jpg'  && $ext !='png') : ?>
+    <?php echo 'SELECTED';  ?>
+    <?php endif ; ?>
+   
+    >
+    
+    
+    
+    <br><br>
     <h4><b><?= $_SESSION['nombre-edit'] ?? $_SESSION['nombre'] ?? 'Firstname' ?> <?= $_SESSION['apellido-edit'] ?? $_SESSION['apellido'] ?? 'Lastname' ?> </b></h4>
     <p class="w3-text-grey" value="">Edit your profile ... </p>
   </div>
@@ -244,7 +255,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                 <div id="color-select" class="ui-select">
                   <select id="month" name="month" class="form-control">
                     <option selected="selected" value="month">Month</option>
-                    <option value="Januari">Januari</option>
+                    <option value="Januari">January</option>
                     <option value="February">February</option>
                     <option value="March">March</option>
                     <option value="April">April</option>
@@ -358,6 +369,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
+
+
             <input type="submit" class="btn w3-teal w3-hover-black" value="Save Changes">
             <span></span>
             <input type="reset" class="btn w3-white w3-hover-gray" value="Cancel">
@@ -458,3 +471,5 @@ function w3_close() {
 
 </body>
 </html>
+
+

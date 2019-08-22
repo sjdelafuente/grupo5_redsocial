@@ -28,7 +28,7 @@ $password = $_POST['password'];
 
 
 
-$stmt = $db->prepare('INSERT INTO usuarios VALUES :nombre, :apellido , :email , :password');
+$stmt = $db->prepare('INSERT INTO usuarios VALUES (NULL, :nombre, :apellido , :email , :password');
 
 
 $stmt -> bindValue('nombre',$nombre);
@@ -38,6 +38,9 @@ $stmt -> bindValue('password',$password);
 
 
 $stmt->execute();
+
+
+
 
 }
 

@@ -1,0 +1,7 @@
+el usuario completa el form
+
+if post
+    validate()
+    if valid
+        saveUuser($_POST)
+        voy a la home

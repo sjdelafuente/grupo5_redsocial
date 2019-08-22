@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
     function old($field, $default = '') {
         return $_REQUEST[$field] ?? $default;
@@ -16,29 +16,29 @@ session_start();
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 
-    
 
-    $errores = [];
+
+    $errors = [];
 
 
     function addError($field, $message) {
-        global $errores;
-        $errores[$field] = $message; 
+        global $errors;
+        $errors[$field] = $message; 
     }
 
     function hasError($field) {
-        global $errores;
-        return isset($errores[$field]);
+        global $errors;
+        return isset($errors[$field]);
     }
 
     function getError($field) {
-        global $errores;
-        return $errores[$field];
+        global $errors;
+        return $errors[$field];
     }
 
     function isValid() {
-        global $errores;
-        return empty($errores);
+        global $errors;
+        return empty($errors);
     }
 
 
